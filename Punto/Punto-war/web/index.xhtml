@@ -7,19 +7,20 @@
     </h:head>
     <h:body>
         <h:form actionListener="#{controladorPunto.asignarCoordenada()}">
-        <h:outputLabel for="AX" value="Coor AX: "/>
-        <h:inputText id="AX" value="#{controladorPunto.coorXA}"/>
-        <h:outputLabel for="AY" value="Coor AY: "/>
-        <h:inputText id="AY" value="#{controladorPunto.coorYA}"/>
-        <h:outputLabel for="BX" value="Coor BX: "/>
-        <h:inputText id="BX" value="#{controladorPunto.coorYB}"/>
-        <h:outputLabel for="BY" value="Coor BY: "/>
-        <h:inputText id="BY" value="#{controladorPunto.coorXB}"/>
-        <h:commandButton value="Asignar A" actionListener="#{controladorPunto.asignarCoordenada}"/> 
-        
-        <br/>
-        <br/>
-        <h:commandButton value="Sigueme :)"  action="puntoC"/>
+            <h:outputLabel value="Coor AX: "/>
+            <h:inputText id="AX" value="#{controladorPunto.coorXA}"/>
+            <h:outputLabel value="Coor AY: "/>
+            <h:inputText id="AY" value="#{controladorPunto.coorYA}"/>
+            <br/>
+            <h:outputLabel value="Coor BX: "/>
+            <h:inputText id="BX" value="#{controladorPunto.coorXB}"/>
+            <h:outputLabel value="Coor BY: "/>
+            <h:inputText id="BY" value="#{controladorPunto.coorYB}"/>
+            <br/>
+            <h:commandButton value="Asignar A" actionListener="#{controladorPunto.asignarCoordenada}"/> 
+            <br/>
+            <br/>
+            <h:commandButton value="Sigueme :)"  action="puntoC"/>
         </h:form>
     </h:body>
 </html>

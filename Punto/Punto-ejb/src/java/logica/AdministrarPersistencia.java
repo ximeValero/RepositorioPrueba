@@ -21,7 +21,7 @@ import javax.sql.DataSource;
 @Stateless
 @LocalBean
 public class AdministrarPersistencia implements AdministrarPersistenciaLocal {
-
+/*
     private Connection connection;
     @Resource(name = "jdbc/RepositorioDB")
     DataSource ds;
@@ -44,12 +44,14 @@ public class AdministrarPersistencia implements AdministrarPersistenciaLocal {
             System.out.println(ex.toString());
         }
     }
+    */
     private Punto a;
     private Punto b;
     private Punto c;
 
     @Override
     public void crearPuntos() {
+        System.out.println("Creacion de puntos.");
         a = new Punto();
         b = new Punto();
         c = new Punto();
