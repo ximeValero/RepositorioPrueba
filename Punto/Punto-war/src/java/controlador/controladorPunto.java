@@ -24,7 +24,7 @@ public class controladorPunto {
     
     private Linea lineaA;
     private String x, y, l, dir;
-    
+    private String texto;
     
     public controladorPunto() {
         administrarPersistencia = new AdministrarPersistencia();
