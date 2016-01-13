@@ -49,11 +49,12 @@ public class AdministrarPersistencia implements AdministrarPersistenciaLocal {
     private Punto a;
     private Punto b;
     private Punto c;
+    
     private Linea linea;
     
     @Override
     public void crearPuntos() {
-        System.out.println("Creacion de puntos.");
+      //  System.out.println("Creacion de puntos.");
         a = new Punto();
         b = new Punto();
         c = new Punto();
@@ -96,14 +97,12 @@ public class AdministrarPersistencia implements AdministrarPersistenciaLocal {
     }
 
     @Override
-    public Linea crearLinea(int x, int y, int l, double dir) {
-       System.out.println("Creacion de puntos.");
-       Punto punto = new Punto();
-       punto.setX(x);
-       punto.setY(y);
+    public Linea crearLinea(Punto p, int l, double dir) {
+       System.out.println("Creacion de linea.");
+       linea = new Linea();
        linea.setLongitud(l);
        linea.setDireccion(dir);
-       linea.setPuntoInicial(punto);
+       linea.setPuntoInicial(p);
        return linea;
     }
 }

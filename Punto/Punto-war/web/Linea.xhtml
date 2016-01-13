@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        Línea
+        <h:form id="form1">
+            <h:outputLabel value="Punto Inicial   X: "/>
+            <h:outputLabel value="#{controladorPunto.lineaA.puntoInicial.x}"/> 
+            <br/>
+            <h:outputLabel value="Punto Inicial   Y: "/>
+            <h:outputLabel value="#{controladorPunto.lineaA.puntoInicial.y}"/> 
+            <br/>
+            <h:outputLabel value="Longitud :"/> 
+            <h:outputLabel value="#{controladorPunto.lineaA.longitud}"/> 
+            <br/>
+            <h:outputLabel value="Direccion:"/> 
+            <h:outputLabel value="#{controladorPunto.lineaA.direccion}"/> 
+            <br/>
+            <h:commandButton value="Regresar" action="index"/> 
+        </h:form>
+
+    </h:body>
+</html>
+

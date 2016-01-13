@@ -31,6 +31,7 @@ public interface AdministrarPersistenciaLocal {
 
     public Punto definirPuntoC();
     
-    public Linea crearLinea(int x, int y, int l, double dir);
+    public Linea crearLinea(Punto p, int l, double dir);
+    //public voidcrearLinea();
     
 }

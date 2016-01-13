@@ -6,7 +6,7 @@
         <title>Facelet Title</title>
     </h:head>
     <h:body>
-        <h:form actionListener="#{controladorPunto.asignarCoordenada()}">
+        <h:form>
             <h:outputLabel value="Coor AX: "/>
             <h:inputText id="AX" value="#{controladorPunto.coorXA}"/>
             <h:outputLabel value="Coor AY: "/>
@@ -23,7 +23,27 @@
             <br/>
             <br/>
             <h:commandButton value="Ver el punto C"  action="puntoC"/>
+            <br/>
+            <br/>
+            <br/>
+            <h:outputLabel value="Punto Inicial(x): "/>
+            <h:inputText id="PX" value="#{controladorPunto.x}"/>
+            <h:outputLabel value="Punto Inicial(y): "/>
+            <h:inputText id="PY" value="#{controladorPunto.y}"/>
+            <br/>
+            <br/>
+            <h:outputLabel value="Longitud: "/>
+            <h:inputText id="l" value="#{controladorPunto.l}"/>
+            <h:outputLabel value="Direccion: "/>
+            <h:inputText id="dir" value="#{controladorPunto.dir}"/>
+            <br/>
+            <br/>
+            <h:commandButton value="Guardar Valores" actionListener="#{controladorPunto.definirLinea}"/> 
+            <br/>
+            <br/>
+            <h:commandButton value="Visualizar Linea"  action="Linea"/>
         </h:form>
+
     </h:body>
 </html>
 

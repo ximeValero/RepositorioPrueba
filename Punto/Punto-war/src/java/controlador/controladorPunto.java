@@ -20,12 +20,10 @@ public class controladorPunto {
     private String coorYB;
     private Punto aux;
     private Punto c;
-    
-    
     private Linea lineaA;
     private String x, y, l, dir;
-    private String texto;
-    
+    //private String texto;
+
     public controladorPunto() {
         administrarPersistencia = new AdministrarPersistencia();
         administrarPersistencia.crearPuntos();
@@ -57,14 +55,20 @@ public class controladorPunto {
         c.setY(-1);
         System.out.println("CX: " + c.getX() + " CY: " + c.getY());
     }
-    
-    
-    public void definirLinea(){
+
+    public void definirLinea() {
+        lineaA = new Linea();
+        System.out.println("En Controlador LineaA X: " + x + ", Y: " + y + ", Longitud:" + l + " y Direccion: " + dir);
+        Punto puntoI = new Punto();
+        puntoI.setX(Integer.valueOf(x));
+        puntoI.setY(Integer.valueOf(y));
+        lineaA = administrarPersistencia.crearLinea(puntoI, 
+                Integer.valueOf(l), 
+                Double.valueOf(dir));
         
-        lineaA = administrarPersistencia.crearLinea(Integer.valueOf(x), Integer.valueOf(y), Integer.valueOf(l), Double.valueOf(dir));
-        System.out.println("En Controlador LineaA X: "+x+", Y: "+y+", Longitud:"+l+" y Direccion: "+dir);
+        System.out.println("En Controlador LineaA X: " + x + ", Y: " + y + ", Longitud:" + l + " y Direccion: " + dir);
     }
-    
+
     public Punto getC() {
         return c;
     }
@@ -144,7 +148,4 @@ public class controladorPunto {
     public void setY(String y) {
         this.y = y;
     }
-    
-    
-    
 }
