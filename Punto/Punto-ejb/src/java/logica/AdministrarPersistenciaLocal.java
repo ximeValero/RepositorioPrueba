@@ -5,6 +5,7 @@
 package logica;
 
 import entidades.Punto;
+import entidades.Linea;
 import javax.ejb.Local;
 
 /**
@@ -29,5 +30,7 @@ public interface AdministrarPersistenciaLocal {
     public void setC(Punto c);
 
     public Punto definirPuntoC();
+    
+    public Linea crearLinea(int x, int y, int l, double dir);
     
 }

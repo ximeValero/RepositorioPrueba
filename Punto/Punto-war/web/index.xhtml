@@ -12,15 +12,17 @@
             <h:outputLabel value="Coor AY: "/>
             <h:inputText id="AY" value="#{controladorPunto.coorYA}"/>
             <br/>
+            <br/>
             <h:outputLabel value="Coor BX: "/>
             <h:inputText id="BX" value="#{controladorPunto.coorXB}"/>
             <h:outputLabel value="Coor BY: "/>
             <h:inputText id="BY" value="#{controladorPunto.coorYB}"/>
             <br/>
-            <h:commandButton value="Asignar A" actionListener="#{controladorPunto.asignarCoordenada}"/> 
+            <br/>
+            <h:commandButton value="Guardar Valores" actionListener="#{controladorPunto.asignarCoordenada}"/> 
             <br/>
             <br/>
-            <h:commandButton value="Sigueme :)"  action="puntoC"/>
+            <h:commandButton value="Ver el punto C"  action="puntoC"/>
         </h:form>
     </h:body>
 </html>

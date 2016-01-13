@@ -4,6 +4,7 @@
  */
 package logica;
 
+import entidades.Linea;
 import entidades.Punto;
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -48,7 +49,8 @@ public class AdministrarPersistencia implements AdministrarPersistenciaLocal {
     private Punto a;
     private Punto b;
     private Punto c;
-
+    private Linea linea;
+    
     @Override
     public void crearPuntos() {
         System.out.println("Creacion de puntos.");
@@ -91,5 +93,17 @@ public class AdministrarPersistencia implements AdministrarPersistenciaLocal {
     @Override
     public void setC(Punto c) {
         this.c = c;
+    }
+
+    @Override
+    public Linea crearLinea(int x, int y, int l, double dir) {
+       System.out.println("Creacion de puntos.");
+       Punto punto = new Punto();
+       punto.setX(x);
+       punto.setY(y);
+       linea.setLongitud(l);
+       linea.setDireccion(dir);
+       linea.setPuntoInicial(punto);
+       return linea;
     }
 }

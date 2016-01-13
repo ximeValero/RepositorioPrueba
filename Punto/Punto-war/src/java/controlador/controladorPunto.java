@@ -51,7 +51,7 @@ public class controladorPunto {
         c.setY(-1);
         System.out.println("CX: " + c.getX() + " CY: " + c.getY());
     }
-
+    
     public Punto getC() {
         return c;
     }
