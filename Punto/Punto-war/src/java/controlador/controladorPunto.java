@@ -1,5 +1,6 @@
 package controlador;
 
+import entidades.Linea;
 import entidades.Punto;
 import javax.ejb.EJB;
 import javax.faces.bean.ApplicationScoped;
@@ -19,7 +20,12 @@ public class controladorPunto {
     private String coorYB;
     private Punto aux;
     private Punto c;
-
+    
+    
+    private Linea lineaA;
+    private String x, y, l, dir;
+    
+    
     public controladorPunto() {
         administrarPersistencia = new AdministrarPersistencia();
         administrarPersistencia.crearPuntos();
@@ -50,6 +56,13 @@ public class controladorPunto {
         c.setX(-1);
         c.setY(-1);
         System.out.println("CX: " + c.getX() + " CY: " + c.getY());
+    }
+    
+    
+    public void definirLinea(){
+        
+        lineaA = administrarPersistencia.crearLinea(Integer.valueOf(x), Integer.valueOf(y), Integer.valueOf(l), Double.valueOf(dir));
+        System.out.println("En Controlador LineaA X: "+x+", Y: "+y+", Longitud:"+l+" y Direccion: "+dir);
     }
     
     public Punto getC() {
@@ -91,4 +104,47 @@ public class controladorPunto {
     public void setCoorYB(String coorYB) {
         this.coorYB = coorYB;
     }
+
+    public Linea getLineaA() {
+        return lineaA;
+    }
+
+    public void setLineaA(Linea lineaA) {
+        this.lineaA = lineaA;
+    }
+
+    public String getDir() {
+        return dir;
+    }
+
+    public void setDir(String dir) {
+        this.dir = dir;
+    }
+
+    public String getL() {
+        return l;
+    }
+
+    public void setL(String l) {
+        this.l = l;
+    }
+
+    public String getX() {
+        return x;
+    }
+
+    public void setX(String x) {
+        this.x = x;
+    }
+
+    public String getY() {
+        return y;
+    }
+
+    public void setY(String y) {
+        this.y = y;
+    }
+    
+    
+    
 }
